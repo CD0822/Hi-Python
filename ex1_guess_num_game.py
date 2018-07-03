@@ -19,9 +19,9 @@ while count > 0:
         elif count == 1:
             exit("You have run out of all the chances, and the correct answer is %d" % (answer))
         elif num > answer:
-            input("Your number %d is bigger, you only have %d chances. \n" %(num,count-1))
+            print("Your number %d is bigger, you only have %d chances. \n" %(num,count-1))
         elif num < answer:
-            input("Your number %d is smaller,you only have %d chances. \n" %(num,count-1))
+            print("Your number %d is smaller,you only have %d chances. \n" %(num,count-1))
     else:
         print("Error: %r is not a number! Please input again!" %temp)
         count += 1
