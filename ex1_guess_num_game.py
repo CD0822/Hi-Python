@@ -14,18 +14,18 @@ while count > 0:
     temp = input("Please input your guess number(0-100): ")
     if temp.isdigit():
         num = int(temp)
+        count -= 1
         if num == answer:
             exit("Congradulations! %d is the right answer! \n" %num)
-        elif count == 1:
+        elif count == 0:
             exit("You have run out of all the chances, and the correct answer is %d" % (answer))
         elif num > answer:
-            print("Your number %d is bigger, you only have %d chances. \n" %(num,count-1))
+            print("Your number %d is bigger, you only have %d chances. \n" %(num,count))
         elif num < answer:
-            print("Your number %d is smaller,you only have %d chances. \n" %(num,count-1))
+            print("Your number %d is smaller,you only have %d chances. \n" %(num,count))
     else:
         print("Error: %r is not a number! Please input again!" %temp)
-        count += 1
-    count -= 1
+    
         
 
 
